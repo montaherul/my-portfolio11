@@ -675,6 +675,7 @@ main {
 /* ===== PROJECTS SECTION ===== */
 #projects {
   background-color: var(--background-secondary);
+   padding: var(--spacing-3xl) 0;
 }
 
 .project-grid {
@@ -742,6 +743,7 @@ main {
 /* ===== SKILLS SECTION ===== */
 #skills {
   background-color: var(--background);
+   padding: var(--spacing-3xl) 0;
 }
 
 .skills-container {
@@ -1195,3 +1197,4 @@ textarea:focus {
   width: 0%;
   transition: width 0.1s ease;
 }
+
