@@ -824,6 +824,7 @@ main {
 #contact {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: var(--white);
+  padding: var(--spacing-3xl) 0;
 }
 
 #contact h2 {
@@ -1197,4 +1198,5 @@ textarea:focus {
   width: 0%;
   transition: width 0.1s ease;
 }
+
 
