@@ -270,7 +270,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--primary-color);
+  background-color: var(--orange);
   color: var(--white);
   text-decoration: none;
   transform: translateY(-2px);
@@ -1198,5 +1198,6 @@ textarea:focus {
   width: 0%;
   transition: width 0.1s ease;
 }
+
 
 
