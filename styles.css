@@ -993,84 +993,108 @@ footer p {
 }
 
 /* ===== RESPONSIVE DESIGN (768px and below) - Fixed Mobile Layout ===== */
+/* ===== MOBILE RESPONSIVE FIX ===== */
 @media (max-width: 768px) {
-    .container {
-        padding: 0 var(--spacing-md);
-    }
 
-    header .container {
-        /* Stack navigation items */
-        flex-direction: column;
-        gap: var(--spacing-md);
-        padding: var(--spacing-md);
-    }
+  /* Fix header */
+  header .container {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
 
-    nav ul {
-        gap: var(--spacing-md);
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    /* Centering Fix Implementation */
-    .home-container {
-        /* Ensures vertical stacking items are centered */
-        align-items: center;
-    }
+  nav ul {
+    gap: var(--spacing-md);
+  }
 
-    .home-image {
-        /* Force image container to be a flexible block and center its content */
-        display: flex;
-        justify-content: center;
-        width: 100%; 
-    }
+  /* Home Section */
+  .home-container {
+    flex-direction: column; 
+    text-align: center; 
+    padding: 20px;
+    gap: var(--spacing-xl);
+  }
 
-    .home-profile-img,
-    .about-profile-img {
-        /* Standardized mobile size (using the smaller 120px) */
-        width: 120px;
-        height: 120px;
-    }
-    
-    /* Font Size Reductions */
-    .home-title {
-        font-size: var(--font-size-4xl);
-    }
+  .home-image {
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
 
-    .section-title {
-        font-size: var(--font-size-3xl);
-    }
+  .home-profile-img {
+    width: 220px;
+    height: 220px;
+  }
 
-    /* Grid Layout Changes */
-    .home-stats,
-    .about-stats {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
+  .home-content {
+    text-align: center;
+  }
 
-    .about-interests {
-        grid-template-columns: 1fr;
-    }
+  .home-title {
+    font-size: var(--font-size-3xl);
+  }
 
-    #contact .container {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
-    }
+  .home-subtitle {
+    font-size: var(--font-size-xl);
+  }
 
-    .home-cta {
-        flex-direction: column;
-        align-items: center;
-    }
+  .home-description {
+    font-size: var(--font-size-base);
+  }
 
-    .cta-button {
-        width: 100%;
-        max-width: 300px;
-        text-align: center;
-    }
+  .home-cta {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
+  /* Home Stats */
+  .home-stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  /* About Section */
+  .about-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-image {
+    justify-content: center;
+  }
+
+  .about-profile-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .about-subtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .about-description {
+    text-align: center;
+    font-size: var(--font-size-base);
+  }
+
+  /* About Stats */
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  /* About Interests */
+  .about-interests {
+    grid-template-columns: 1fr;
+  }
+
+  .interest-card {
+    padding: var(--spacing-lg);
+  }
 }
+
 
 /* ===== RESPONSIVE DESIGN (480px and below) ===== */
 @media (max-width: 480px) {
@@ -1243,3 +1267,4 @@ textarea:focus {
     width: 0%;
     transition: width 0.1s ease;
 }
+
