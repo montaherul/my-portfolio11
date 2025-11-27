@@ -354,19 +354,30 @@ main {
 }
 
 .home-container {
+
+
+  display: flex;
+  flex-direction: column; /* Stacks image above content on mobile */
+  align-items: center; /* Crucial: Centers all items horizontally */
+  text-align: center; /* Centers text content inside the container */
+  padding: 20px;
   position: relative;
   z-index: 1;
-  display: grid;
   grid-template-columns: 1fr 2fr;
   gap: var(--spacing-4xl);
-  align-items: center;
   margin-bottom: var(--spacing-4xl);
+
+
+  
 }
 
 .home-image {
-  position: relative;
-  display: flex;
-  justify-content: center;
+   
+    width: 100%;
+    margin-bottom: 20px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 
 .home-profile-img {
@@ -374,6 +385,9 @@ main {
   height: 320px;
   border-radius: 50%;
   object-fit: cover;
+  position: static; 
+  margin: 0 auto; /* This works for block elements, but the flex/grid centering is better */
+  display: block; /* Ensures margin: auto can work if not using flex centering */
   border: 6px solid rgba(255, 255, 255, 0.2);
   box-shadow: var(--shadow-2xl);
   transition: all 0.4s ease;
@@ -977,6 +991,40 @@ footer p {
   }
 }
 
+
+
+@media (max-width: 768px) {
+    /* Re-enforce centering on mobile/tablet view */
+    .home-container {
+        align-items: center;
+    }
+
+    .home-image {
+        /* Overrides any conflicting desktop-specific alignment */
+        display: flex;
+        justify-content: center;
+        width: 100%; /* Important to allow centering to work */
+    }
+
+    .home-profile-img {
+        /* Ensure the image is a predictable size on mobile */
+        width: 120px; /* Slightly smaller for mobile might be better */
+        height: 120px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
 @media (max-width: 768px) {
   .container {
     padding: 0 var(--spacing-md);
@@ -1037,7 +1085,8 @@ footer p {
   .project-grid {
     grid-template-columns: 1fr;
   }
-}
+} */
+
 
 @media (max-width: 480px) {
   .home-title {
@@ -1198,6 +1247,7 @@ textarea:focus {
   width: 0%;
   transition: width 0.1s ease;
 }
+
 
 
 
